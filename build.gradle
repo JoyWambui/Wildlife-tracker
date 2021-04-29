@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'wildlife-tracker'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'App'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'com.sparkjava:spark-core:2.9.3'
+    implementation 'com.sparkjava:spark-template-handlebars:2.7.1'
+    implementation 'org.slf4j:slf4j-simple:1.7.30'
+    implementation 'org.sql2o:sql2o:1.6.0'
+    implementation 'org.postgresql:postgresql:42.2.18'
+    implementation 'postgresql:postgresql:9.1-901-1.jdbc4'
+}
+
+test {
+    useJUnitPlatform()
+}
